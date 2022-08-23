@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class HelloControllerUnitTest {
 
     @Test
-    public void testSayHello(){
+    public void testSayHello() {
         HelloController helloController = new HelloController();
         BindingAwareModelMap model = new BindingAwareModelMap();
 

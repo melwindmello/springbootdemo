@@ -10,8 +10,8 @@ public class HelloController {
 
 
     @GetMapping("/hello")
-    public String sayHello(@RequestParam(defaultValue = "world") String name, Model model){
-        model.addAttribute("user",name);
+    public String sayHello(@RequestParam(defaultValue = "world") String name, Model model) {
+        model.addAttribute("user", name);
         return "welcome";
     }
 
