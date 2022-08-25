@@ -1,5 +1,6 @@
 package com.melit.springbootdemo;
 
+import com.melit.springbootdemo.persistence.dao.JpaOfficerDAO;
 import com.melit.springbootdemo.persistence.dao.OfficerDAO;
 import com.melit.springbootdemo.persistence.entities.Officer;
 import com.melit.springbootdemo.persistence.entities.Rank;
@@ -14,14 +15,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @SpringBootTest
 @Transactional
 // @Transactional > In a test class like this, Spring will interpret that to mean that each test should run in a transaction that rolls back at the end of the test.
-public class JdbcOfficerDAOTest {
+public class JpaOfficerDAOTest {
 
     @Autowired
     @Qualifier("jdbcOfficerDAO")
